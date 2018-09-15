@@ -1,0 +1,22 @@
+{
+  "name": "earth-track",
+  "version": "1.0.0",
+  "description": "locate yourself anywhere on earth",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/claudialigidakis/earth-track.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/claudialigidakis/earth-track/issues"
+  },
+  "homepage": "https://github.com/claudialigidakis/earth-track#readme",
+  "dependencies": {
+    "axios": "^0.18.0"
+  }
+}

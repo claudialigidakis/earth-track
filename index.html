@@ -9,13 +9,72 @@
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <link rel="stylesheet" href="styles/main.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script defer src="project_scripts/nasa-images.js"></script>
   <script defer src="project_scripts/main.js"></script>
 </head>
 
 <body>
-  <!-- Navigation -->
+  <div class="row" id="sidebar">
+    <div class="col s12 m4 l3">
+      <ul class="collection with-header">
+        <li class="collection-header">
+          <h5>Instructions</h5></li>
+        <li class="collection-item">1) Enter latitude and longitude points of anywhere on Earth in the form</li>
+        <li class="collection-item">2) Press submit and see your image appear</li>
+        <li class="collection-header">
+          <h5>Popular Destinations</h5></li>
+        <li class="collection-item avatar">
+          <img src="https://www.nationalgeographic.com/content/dam/archaeologyandhistory/rights-exempt/history-magazine/2017/01-02/giza-pyramids/giza-plateau-pyramids.ngsversion.1485215491918.adapt.1900.1.jpg" alt="pyramids" class="circle">
+          <span class="title">Pyramids</span>
+          <p>Lat: 29.9773 <br> Long: 31.1325
+          </p>
+          <a href="#!" class="secondary-content"><i class="material-icons right">send</i></a>
+        </li>
+        <li class="collection-item avatar">
+          <img src="https://www.nps.gov/grca/planyourvisit/images/0531fyp.jpg?maxwidth=650&autorotate=false" alt="grand_canyon" class="circle">
+          <span class="title">Grand Canyon</span>
+          <p>Lat: 36.1070 <br> Long: 112.1130
+          </p>
+          <a href="#!" class="secondary-content"><i class="material-icons right">send</i></a>
+        </li>
+        <li class="collection-item avatar">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRgG7nkaRH1V2V6DYrS6G2FRs40NA30bemuI350dM5SIOF2Iic" alt="bahamas" class="circle">
+          <span class="title">Bahamas</span>
+          <p>Lat: 25.0343 <br> Long: 77.3963
+          </p>
+          <a href="#!" class="secondary-content"><i class="material-icons right">send</i></a>
+        </li>
+        <li class="collection-item avatar">
+          <img src="https://imagesvc.timeincapp.com/v3/mm/image?url=https%3A%2F%2Fcdn-image.travelandleisure.com%2Fsites%2Fdefault%2Ffiles%2Fstyles%2F1600x1000%2Fpublic%2F1507218132%2Fnew-york-city-skyline-CHEAPNYCFLIGHT1017.jpg%3Fitok%3DBuIH6Efp&w=700&q=85" alt="newyork"
+            class="circle">
+          <span class="title">New York City</span>
+          <p>Lat: 40.7128 <br> Long: 74.0060
+          </p>
+          <a href="#!" class="secondary-content"><i class="material-icons right">send</i></a>
+        </li>
+      </ul>
+    </div>
 
+    <div class="col s12 m8 l9" id="main" class="center-align">
+      <div class="row">
+        <form id="coordinates" class="col s12">
+          <div class="input-field col s10">
+            <input id="points" type="text" class="validate">
+            <label for="points">Latitude, Longitude</label>
+            <span class="helper-text" data-error="Invalid Input">Enter latitude before longitude seperated by a comma. ex: 44.525049, -110.83819</span>
+          </div>
+          <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+        <i class="material-icons right">send</i>
+      </button>
+        </form>
+      </div>
+      <div class="row">
+        <img id="map" class="materialboxed" width="650" src="http://concurso.ens.org.co/wp-content/uploads/sites/4/2018/04/Mapa-Mundi-22.gif">
+      </div>
+    </div>
+  </div>
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
