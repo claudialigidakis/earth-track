@@ -16,64 +16,151 @@
 </head>
 
 <body>
-  <div class="row" id="sidebar">
-    <div class="col s12 m4 l3">
-      <ul class="collection with-header">
-        <li class="collection-header">
-          <h5>Instructions</h5></li>
-        <li class="collection-item">1) Enter latitude and longitude points of anywhere on Earth in the form</li>
-        <li class="collection-item">2) Press submit and see your image appear</li>
-        <li class="collection-header">
-          <h5>Popular Destinations</h5></li>
-        <li class="collection-item avatar">
-          <img src="https://www.nationalgeographic.com/content/dam/archaeologyandhistory/rights-exempt/history-magazine/2017/01-02/giza-pyramids/giza-plateau-pyramids.ngsversion.1485215491918.adapt.1900.1.jpg" alt="pyramids" class="circle">
-          <span class="title">Pyramids</span>
-          <p>Lat: 29.9773 <br> Long: 31.1325
-          </p>
-          <a href="#!" class="secondary-content"><i class="material-icons right">send</i></a>
-        </li>
-        <li class="collection-item avatar">
-          <img src="https://www.nps.gov/grca/planyourvisit/images/0531fyp.jpg?maxwidth=650&autorotate=false" alt="grand_canyon" class="circle">
-          <span class="title">Grand Canyon</span>
-          <p>Lat: 36.1070 <br> Long: 112.1130
-          </p>
-          <a href="#!" class="secondary-content"><i class="material-icons right">send</i></a>
-        </li>
-        <li class="collection-item avatar">
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRgG7nkaRH1V2V6DYrS6G2FRs40NA30bemuI350dM5SIOF2Iic" alt="bahamas" class="circle">
-          <span class="title">Bahamas</span>
-          <p>Lat: 25.0343 <br> Long: 77.3963
-          </p>
-          <a href="#!" class="secondary-content"><i class="material-icons right">send</i></a>
-        </li>
-        <li class="collection-item avatar">
-          <img src="https://imagesvc.timeincapp.com/v3/mm/image?url=https%3A%2F%2Fcdn-image.travelandleisure.com%2Fsites%2Fdefault%2Ffiles%2Fstyles%2F1600x1000%2Fpublic%2F1507218132%2Fnew-york-city-skyline-CHEAPNYCFLIGHT1017.jpg%3Fitok%3DBuIH6Efp&w=700&q=85" alt="newyork"
-            class="circle">
-          <span class="title">New York City</span>
-          <p>Lat: 40.7128 <br> Long: 74.0060
-          </p>
-          <a href="#!" class="secondary-content"><i class="material-icons right">send</i></a>
-        </li>
-      </ul>
-    </div>
 
-    <div class="col s12 m8 l9" id="main" class="center-align">
-      <div class="row">
-        <form id="coordinates" class="col s12">
-          <div class="input-field col s10">
-            <input id="points" type="text" class="validate">
-            <label for="points">Latitude, Longitude</label>
-            <span class="helper-text" data-error="Invalid Input">Enter latitude before longitude seperated by a comma. ex: 44.525049, -110.83819</span>
+  <div class="jumbotron">
+    <div class="img"></div>
+    <div class="container">
+      <h1 class="flow-text">Earth Track</h1>
+      <hr class="my-2" />
+      <p class="flow-text">
+        Explore earthly destinations without even leaving your chair
+      <div id="scroll_button" class="row">
+        <a href="#instructions" class="btn-floating btn-large pulse hide-on-med-and-down"><i class="material-icons">arrow_downward</i></a>
+      </div>
+      </p>
+    </div>
+  </div>
+
+  <!-- <div class="section scrollspy"> -->
+  <div class="section scrollspy">
+    <div id="instructions" class="row">
+      <h3 class="center-align">Instructions</h4>
+          <div class="col s4 center-align">
+            <i class="material-icons large">map</i>
+            <br>
+            <h5 class="flow-text">Step One:<h5>
+            <h6 class="flow-text">Find latitude and longitude points of any place on Earth</h6>
           </div>
-          <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+          <div class="col s4 center-align">
+            <i class="material-icons large">details</i>
+            <br>
+            <h5 class="flow-text">Step Two:<h5>
+            <h6 class="flow-text">Enter the points in the form below</h6>
+          </div>
+          <div class="col s4 center-align">
+            <i class="material-icons large">image</i>
+            <br>
+            <h5 class="flow-text">Step Three:<h5>
+            <h6 class="flow-text">Press submit and see your image appear</h6>
+          </div>
+        </div>
+        <ul id="destinations" class="collection with-header">
+          <li class="collection-header">
+            <h4 class="center-align">Recommended Destinations</h4>
+          </li>
+            <div class="container">
+          <li class="collection-item avatar">
+            <img src="https://www.nationalgeographic.com/content/dam/archaeologyandhistory/rights-exempt/history-magazine/2017/01-02/giza-pyramids/giza-plateau-pyramids.ngsversion.1485215491918.adapt.1900.1.jpg" alt="pyramids" class="circle">
+            <span class="title">Pyramids</span>
+            <p>Lat: 29.972329444 <br> Long: 31.125332832
+            </p>
+            <a href="#main" id="29.972329444, 31.125332832" class="secondary-content quick"><i class="material-icons right">send</i></a>
+          </li>
+          <li class="collection-item avatar">
+            <img src="https://www.taketours.com/images/logo/39087.jpg" alt="niagara_falls" class="circle">
+            <span class="title">Niagara Falls</span>
+            <p>Lat: 43.08 <br> Long: ‎-79.071
+            </p>
+            <a href="#main" id="43.08, -79.071" class="secondary-content quick"><i class="material-icons right">send</i></a>
+          </li>
+          <li class="collection-item avatar">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRgG7nkaRH1V2V6DYrS6G2FRs40NA30bemuI350dM5SIOF2Iic" alt="bahamas" class="circle">
+            <span class="title">Sandy Beach Bahamas</span>
+            <p>Lat: 26.0166666 <br> Long: -77.3999984
+            </p>
+            <a href="#main" id="26.0166666, -77.3999984" class="secondary-content quick"><i class="material-icons right">send</i></a>
+          </li>
+          <li class="collection-item avatar">
+            <img src="https://imagesvc.timeincapp.com/v3/mm/image?url=https%3A%2F%2Fcdn-image.travelandleisure.com%2Fsites%2Fdefault%2Ffiles%2Fstyles%2F1600x1000%2Fpublic%2F1507218132%2Fnew-york-city-skyline-CHEAPNYCFLIGHT1017.jpg%3Fitok%3DBuIH6Efp&w=700&q=85" alt="newyork"
+              class="circle">
+            <span class="title">New York City</span>
+            <p>Lat: 40.7589 <br> Long: -73.9851
+            </p>
+            <a id="40.7589, -73.9851" href="#main" class="secondary-content quick"><i class="material-icons right">send</i></a>
+          </li>
+          <li class="collection-item avatar">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRk-ncWyPey59AQSFXx5I-UTKl_wOGWANTvYMvKBvvZUAE4bBdNuQ" alt="seattle" class="circle">
+            <span class="title">Seattle Washington</span>
+            <p>Lat: 47.6101 <br> Long: -122.3421
+            </p>
+            <a href="#main" id="47.6101, -122.3421" class="secondary-content quick"><i class="material-icons right">send</i></a>
+          </li>
+        </ul>
+      </div>
+    <!-- </div> -->
+  </div>
+
+
+<div id="main" class="center-align">
+  <div class="section">
+    <div id="input_points" class="row">
+      <h3>Begin your journey...</h3>
+      <br>
+      <form id="coordinates" class="col s12">
+        <div class="input-field col s10">
+          <input id="points" type="text" class="validate">
+          <label for="points">Latitude, Longitude</label>
+          <span class="helper-text" data-error="Invalid Input">Enter latitude before longitude seperated by a comma. ex: 41.7475067,-74.0968971</span>
+        </div>
+        <button class="btn waves-effect" type="submit">Submit
         <i class="material-icons right">send</i>
       </button>
-        </form>
-      </div>
-      <div class="row">
-        <img id="map" class="materialboxed" width="650" src="http://concurso.ens.org.co/wp-content/uploads/sites/4/2018/04/Mapa-Mundi-22.gif">
-      </div>
+      </form>
     </div>
+    <div id="imageSearch" class="container center-align">
+      <div id="loader" class="center-align">
+        <div class="preloader-wrapper big active">
+          <div class="spinner-layer spinner-blue-only">
+            <div class="circle-clipper left">
+              <div class="circle"></div>
+            </div>
+            <div class="gap-patch">
+              <div class="circle"></div>
+            </div>
+            <div class="circle-clipper right">
+              <div class="circle"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row" id="display_points"></div>
+
+      <div id="map" class="center-align">
+        <div class="row">
+          <img id="top-left" class="col s4" src="">
+          <img id="top-middle" class="col s4" src="">
+          <img id="top-right" class="col s4" src="">
+          <!-- </div>
+         <div class="row"> -->
+
+          <img id="center-left" class="col s4" src="">
+
+          <div id="image-wrapper">
+          <img id="center" class="col s4" src="">
+          </div>
+
+          <img id="center-right" class="col s4" src="">
+          <!-- </div>
+         <div class="row"> -->
+          <img id="bottom-left" class="col s4" src="">
+          <img id="bottom-center" class="col s4" src="">
+          <img id="bottom-right" class="col s4" src="">
+        </div>
+      </div>
+
+
+    </div>
+  </div>
   </div>
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

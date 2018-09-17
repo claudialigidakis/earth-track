@@ -1,7 +1,120 @@
-img.materialboxed {
-  margin: 10px;
+html, body {
+  max-width: 100%;
+  color: #00171F;
+  overflow-x: hidden;
+}
+
+/* JUMBO */
+
+.jumbotron {
+  height: 100vh;
+}
+
+.jumbotron .img {
+  margin-bottom: 0px;
+  opacity: 0.3;
+  color: #fff;
+  background: #000 url("https://www.outsideonline.com/sites/default/files/2017-07-24_parent/2017-07-24_68/6a00d83453140969e201630575c968970d-640wi_0.jpeg") center;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.jumbotron h2 {
+  text-align: center;
+}
+
+.jumbotron h1 {
+  font-size: 50px;
+}
+
+.jumbotron {
+  position: relative;
+  padding-top: 50px;
+  text-align: center;
+  padding-bottom: 50px;
+  margin-bottom: 0px;
+}
+
+.jumbotron .container {
+  position: relative;
+  z-index: 2;
+}
+
+@media screen and (max-width: 768px) {
+  .jumbotron {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+
+#scroll_button {
+  margin-top: 15rem;
+}
+
+.pulse {
+  background-color: #00A7E1;
+}
+
+#instructions {
+  margin: 0px;
+  padding: 1rem;
+}
+
+#destinations {
+  background-color: #0B4F6C;
+}
+
+.section {
+  padding-top: 0rem;
+}
+
+#input_points {
+  height: 5vh;
+}
+
+#imageSearch {
+  align: center;
+}
+
+#map {
+  display: none;
+  align: center;
+}
+
+#image-wrapper {
+    position: relative;
+}
+
+span.marker {
+    color: #fff;
+    text-align: center;
+    position: absolute;
+    line-height: 20px;
+    cursor: pointer;
+}
+
+span.marker:before {
+    content: '📍';
+}
+
+.btn {
+  background-color: #00A7E1
+}
+
+.row .col.s4 {
+  padding: 0;
 }
 
 .waves-effect {
   margin-top: 1.5rem;
+}
+
+#loader {
+  display: none;
+  align: center
 }
