@@ -54,7 +54,7 @@ Also, be sure to have `git` available in your PATH, `npm` might need it.
 
 ## Install
 
-    $ git clone https://github.com/earth-track
+    $ git clone https://github.com/earth-track.git
     $ cd earth-track
     $ npm install
     
