@@ -43,7 +43,7 @@ const createMap = async (latitude, longitude) => {
     showSpinner()
     $('#points').val("")
     $('#points').removeClass('valid')
-    const images = await axios.post(`http://localhost:3000/views`, {latitude, longitude})
+    const images = await axios.post(`https://still-spire-69766.herokuapp.com/views`, {latitude, longitude})
     $('#display_points').html(`${latitude}, ${longitude}`)
 
     $('#top-left').attr("src", `${images.data.top_left}`)
